@@ -1,0 +1,66 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.card {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.card-container {
+    position: relative;
+    display: inline-block;
+}
+.card-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    border-radius: 17px; /* Увеличиваем радиус, чтобы контур был за границами */
+    z-index: -1;
+    animation: rainbow 5s linear infinite;
+}
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+.avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease-in-out; /* Add this line to enable hover animation */
+}
+.avatar:hover {
+    transform: scale(1.1); /* This line will scale the image to 110% of its original size when hovered */
+}
+.name {
+    font-size: 24px;
+    margin-top: 10px;
+}
+.description {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.languages {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.languages::before {
+    content: "\f0c1 \f0c2 \f0c3 \f0c9"; /* These are the Font Awesome codes for JS, PY, C++, and C# respectively */
+    font-size: 1.5em;
+    margin-right: 5px;
+    color: #fff;
+}
