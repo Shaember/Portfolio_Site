@@ -5,64 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaember</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background-color: #333;
-            border-radius: 15px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        .card-container {
-            position: relative;
-            display: inline-block;
-        }
-        .card-container::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-            border-radius: 17px; /* Увеличиваем радиус, чтобы контур был за границами */
-            z-index: -1;
-            animation: rainbow 5s linear infinite;
-        }
-        @keyframes rainbow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
-        }
-        .avatar {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-        }
-        .name {
-            font-size: 24px;
-            margin-top: 10px;
-        }
-        .description {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        .languages {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-    </style>
 </head>
 <body>
     <div class="card-container">
